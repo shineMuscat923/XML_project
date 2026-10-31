@@ -1,0 +1,38 @@
+<!ENTITY % ID " id CDATA #REQUIRED">
+<!ELEMENT stockManagement (companies, markets, sectors, transactions)>
+<!ELEMENT companies (company*)>
+<!ELEMENT company (name, ticker, financialReports)>
+<!ATTLIST company %ID;
+                    market (KOSPI | KOSDAQ | NASDAQ | NYSE) #REQUIRED
+                    sector CDATA #REQUIRED>
+<!ELEMENT financialReports (financialReport*)>
+<!ATTLIST financialReports currency (USD | KRW) #REQUIRED
+                            unit (trillion | billion) #IMPLIED>
+<!ELEMENT financialReport (revenue, operatingIncome, netIncome)>
+<!ATTLIST financialReport year CDATA #REQUIRED>
+<!ATTLIST financialReport quarter CDATA #REQUIRED>
+<!ATTLIST financialReport status (released | unreleased) "released">
+<!ELEMENT revenue (#PCDATA)>
+<!ELEMENT operatingIncome (#PCDATA)>
+<!ELEMENT netIncome (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT ticker (#PCDATA)>
+<!ELEMENT markets (market*)>
+<!ELEMENT market (name, description)>
+<!ATTLIST market %ID;>
+<!ELEMENT description (#PCDATA) >
+<!ELEMENT sectors (sector*)>
+<!ELEMENT sector (name, stocks)>
+<!ATTLIST sector %ID;>
+<!ATTLIST stock %ID;>
+<!ELEMENT stocks (stock*)>
+<!ELEMENT stock EMPTY>
+<!ELEMENT transactions (transaction*)>
+<!ELEMENT transaction (companyId, date, type, quantity, price)>
+<!ATTLIST transaction %ID;>
+<!ELEMENT companyId (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
