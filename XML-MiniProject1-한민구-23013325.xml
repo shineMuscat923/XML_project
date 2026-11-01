@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE stockManagement SYSTEM "XML-MiniProject1-한민구-23013325-DTD.dtd">
 
-
-
 <stockManagement>
     <companies>
         <company id="C01" market ="KOSPI" sector="반도체">

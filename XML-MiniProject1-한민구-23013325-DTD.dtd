@@ -1,8 +1,7 @@
-<!ENTITY kospi "Korea Composite Stock Price Index">
-<!ENTITY kosdaq "Korea Securities Dealers Automated Quotations">
-<!ENTITY nasdaq "National Association of Securities Dealers Automated Quotations">
-<!ENTITY nyse "New York Stock Exchange">
-
+<!ENTITY kospi "한국거래소 유가증권시장">
+<!ENTITY kosdaq "한국거래소 코스닥시장">
+<!ENTITY nasdaq "미국 나스닥 증권거래소">
+<!ENTITY nyse "미국 뉴욕증권거래소">
 
 <!ENTITY % ID " id CDATA #REQUIRED">
 <!ELEMENT stockManagement (companies, markets, sectors, transactions)>
