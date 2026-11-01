@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE stockManagement SYSTEM "test.dtd">
+<!DOCTYPE stockManagement SYSTEM "XML-MiniProject1-한민구-23013325-DTD.dtd">
+
+
 
 <stockManagement>
     <companies>
@@ -431,19 +433,19 @@
     <markets>
         <market id="M01">
             <name>KOSPI</name>
-            <description>한국거래소 유가증권시장</description>
+            <description>&kospi;</description>
         </market>
         <market id="M02">
             <name>KOSDAQ</name>
-            <description>한국거래소 코스닥시장</description>
+            <description>&kosdaq;</description>
         </market>
         <market id="M03">
             <name>NASDAQ</name>
-            <description>미국 나스닥 증권거래소</description>
+            <description>&nasdaq;</description>
         </market>
         <market id="M04">
             <name>NYSE</name>
-            <description>미국 뉴욕증권거래소</description>
+            <description>&nyse;</description>
         </market>
     </markets>
 

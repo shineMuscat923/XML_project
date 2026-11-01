@@ -1,3 +1,9 @@
+<!ENTITY kospi "Korea Composite Stock Price Index">
+<!ENTITY kosdaq "Korea Securities Dealers Automated Quotations">
+<!ENTITY nasdaq "National Association of Securities Dealers Automated Quotations">
+<!ENTITY nyse "New York Stock Exchange">
+
+
 <!ENTITY % ID " id CDATA #REQUIRED">
 <!ELEMENT stockManagement (companies, markets, sectors, transactions)>
 <!ELEMENT companies (company*)>
@@ -15,18 +21,20 @@
 <!ELEMENT revenue (#PCDATA)>
 <!ELEMENT operatingIncome (#PCDATA)>
 <!ELEMENT netIncome (#PCDATA)>
-<!ELEMENT name (#PCDATA)>
 <!ELEMENT ticker (#PCDATA)>
+
 <!ELEMENT markets (market*)>
 <!ELEMENT market (name, description)>
 <!ATTLIST market %ID;>
 <!ELEMENT description (#PCDATA) >
+
 <!ELEMENT sectors (sector*)>
 <!ELEMENT sector (name, stocks)>
 <!ATTLIST sector %ID;>
 <!ATTLIST stock %ID;>
 <!ELEMENT stocks (stock*)>
 <!ELEMENT stock EMPTY>
+
 <!ELEMENT transactions (transaction*)>
 <!ELEMENT transaction (companyId, date, type, quantity, price)>
 <!ATTLIST transaction %ID;>
@@ -35,4 +43,5 @@
 <!ELEMENT type (#PCDATA)>
 <!ELEMENT quantity (#PCDATA)>
 <!ELEMENT price (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
 

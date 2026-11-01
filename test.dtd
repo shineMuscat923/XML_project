@@ -1,3 +1,9 @@
+<!ENTITY kospi "한국거래소 유가증권시장">
+<!ENTITY kosdaq "한국거래소 코스닥시장">
+<!ENTITY nasdaq "미국 나스닥 증권거래소">
+<!ENTITY nyse "미국 뉴욕증권거래소">
+
+
 <!ENTITY % ID " id CDATA #REQUIRED">
 <!ELEMENT stockManagement (companies, markets, sectors, transactions)>
 <!ELEMENT companies (company*)>
@@ -15,18 +21,20 @@
 <!ELEMENT revenue (#PCDATA)>
 <!ELEMENT operatingIncome (#PCDATA)>
 <!ELEMENT netIncome (#PCDATA)>
-<!ELEMENT name (#PCDATA)>
 <!ELEMENT ticker (#PCDATA)>
+
 <!ELEMENT markets (market*)>
 <!ELEMENT market (name, description)>
 <!ATTLIST market %ID;>
 <!ELEMENT description (#PCDATA) >
+
 <!ELEMENT sectors (sector*)>
 <!ELEMENT sector (name, stocks)>
 <!ATTLIST sector %ID;>
 <!ATTLIST stock %ID;>
 <!ELEMENT stocks (stock*)>
 <!ELEMENT stock EMPTY>
+
 <!ELEMENT transactions (transaction*)>
 <!ELEMENT transaction (companyId, date, type, quantity, price)>
 <!ATTLIST transaction %ID;>
@@ -35,4 +43,5 @@
 <!ELEMENT type (#PCDATA)>
 <!ELEMENT quantity (#PCDATA)>
 <!ELEMENT price (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
 
