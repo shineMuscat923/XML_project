@@ -552,7 +552,7 @@
 
     <accounts> 
         <account id ="A01">
-            <name>user1</name>
+            <userID>user1</userID>
             <balance currency ="KRW">10000000</balance>
             <balance currency ="USD">1000000</balance>
 
@@ -562,7 +562,7 @@
             </transactionHistory>
         </account>
          <account id ="A02">
-            <name>user2</name>
+            <userID>user2</userID>
             <balance currency ="KRW">20000000</balance>
             <balance currency ="USD">2000000</balance>
             <transactionHistory>
