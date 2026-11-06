@@ -2,8 +2,9 @@
 <!ENTITY kosdaq "한국거래소 코스닥시장">
 <!ENTITY nasdaq "미국 나스닥 증권거래소">
 <!ENTITY nyse "미국 뉴욕증권거래소">
-
 <!ENTITY % ID " id CDATA #REQUIRED">
+
+
 <!ELEMENT stockManagement (companies, markets, sectors, transactions)>
 <!ELEMENT companies (company*)>
 <!ELEMENT company (name, ticker, financialReports)>
@@ -15,7 +16,7 @@
                             unit (trillion | billion) #IMPLIED>
 <!ELEMENT financialReport (revenue, operatingIncome, netIncome)>
 <!ATTLIST financialReport year CDATA #REQUIRED>
-<!ATTLIST financialReport quarter CDATA #REQUIRED>
+<!ATTLIST financialReport quarter (Q1 | Q2 | Q3 | Q4) #REQUIRED>
 <!ATTLIST financialReport status (released | unreleased) "released">
 <!ELEMENT revenue (#PCDATA)>
 <!ELEMENT operatingIncome (#PCDATA)>
@@ -35,12 +36,12 @@
 <!ELEMENT stock EMPTY>
 
 <!ELEMENT transactions (transaction*)>
-<!ELEMENT transaction (companyId, date, type, quantity, price)>
+<!ELEMENT transaction (accountID+, companyId+, date+, type+, quantity+, price+)>
 <!ATTLIST transaction %ID;>
+<!ELEMENT accountID (#PCDATA)>
 <!ELEMENT companyId (#PCDATA)>
 <!ELEMENT date (#PCDATA)>
 <!ELEMENT type (#PCDATA)>
 <!ELEMENT quantity (#PCDATA)>
 <!ELEMENT price (#PCDATA)>
 <!ELEMENT name (#PCDATA)>
-
