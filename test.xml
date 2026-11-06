@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE stockManagement SYSTEM "test.dtd">
 
-
-
 <stockManagement>
     <companies>
         <company id="C01" market ="KOSPI" sector="반도체">
@@ -519,35 +517,59 @@
 
     <transactions>
         <transaction id="T01">
-            <companyId>C01</companyId>
+            <accountID>A01</accountID>
+            <companyID>C01</companyID>
             <date>2025-01-15</date>
             <type>buy</type>
             <quantity>100</quantity>
             <price>70000</price>
         </transaction>
         <transaction id="T02">
-            <companyId>C02</companyId>
+            <accountID>A01</accountID>
+            <companyID >C02</companyID>
             <date>2025-01-20</date>
             <type>sell</type>
             <quantity>50</quantity>
             <price>120000</price>
         </transaction>
         <transaction id="T03">
-            <companyId>C03</companyId>
+            <accountID>A01</accountID>
+            <companyID>C03</companyID>
             <date>2025-02-05</date>
             <type>buy</type>
             <quantity>200</quantity>
             <price>150000</price>
         </transaction>
         <transaction id="T04">
-            <companyId>C04</companyId>
+            <accountID>A01</accountID>
+            <companyID>C04</companyID>
             <date>2025-02-10</date>
             <type>sell</type>
             <quantity>80</quantity>
             <price>60000</price>
         </transaction>
-
     </transactions>
 
+    <accounts> 
+        <account id ="A01">
+            <userID>user1</userID>
+            <balance currency ="KRW">10000000</balance>
+            <balance currency ="USD">1000000</balance>
+
+            <transactionHistory>
+                <transactionID>T01</transactionID>
+                <transactionID>T02</transactionID>
+            </transactionHistory>
+        </account>
+         <account id ="A02">
+            <userID>user2</userID>
+            <balance currency ="KRW">20000000</balance>
+            <balance currency ="USD">2000000</balance>
+            <transactionHistory>
+                <transactionID>T03</transactionID>
+                <transactionID>T04</transactionID>
+            </transactionHistory>
+        </account>
+    </accounts>
 
 </stockManagement>
