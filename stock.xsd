@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.stock.org"
+    xmlns:stk="http://www.stock.org"
+    xmlns:co="http://www.company.org"
+    xmlns:tra="http://www.transaction.org"
+    xmlns:frm="http://www.form.org"
+    xmlns:acc="http://www.account.org"
+ 
+    elementFormDefault="qualified">
+
+    <xsd:import namespace="http://www.form.org"
+        schemaLocation="form.xsd" />
+
+    <xsd:import namespace="http://www.company.org"
+        schemaLocation="company.xsd" />
+
+    <xsd:import namespace="http://www.transaction.org"
+        schemaLocation="transaction.xsd" />
+
+     <xsd:import namespace="http://www.account.org"
+        schemaLocation="user.xsd" />
+
+    <xsd:include schemaLocation="market.xsd"/>
+
+    <xsd:include schemaLocation="sector.xsd"/>
+
+
+    <xsd:element name="stockManagement">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="co:companies" />
+                <xsd:element ref="stk:markets" />
+                <xsd:element ref="stk:sectors" />
+                <xsd:element ref="tra:transactions" />
+                <xsd:element ref="acc:accounts" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+
+</xsd:schema>

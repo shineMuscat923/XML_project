@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.account.org"
+xmlns:acc="http://www.account.org"
+elementFormDefault="qualified">
+
+    <xsd:element name="accounts">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="account" minOccurs="0" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="userID" type="xsd:string" />
+                            <xsd:element name="balance" minOccurs="2" maxOccurs="2" >
+                                <xsd:complexType>
+                                   <xsd:simpleContent>
+                                    <xsd:extension base="xsd:string">
+                                        <xsd:attribute name="currency" type="acc:currencyType" use="required" />
+                                    </xsd:extension>
+                                   </xsd:simpleContent>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="transactionHistory">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="transactionID" type="acc:transactionID" minOccurs="0" maxOccurs="unbounded" />
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="id" type="acc:accountID" use="required" />
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+
+    <xsd:simpleType name="accountID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="3"/>
+            <xsd:pattern value="A[0-9]{2}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="transactionID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="3"/>
+            <xsd:pattern value="T[0-9]{2}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+     <xsd:simpleType name="currencyType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="USD"></xsd:enumeration>
+            <xsd:enumeration value="KRW"></xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>   

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.transaction.org"
+    xmlns:tra="http://www.transaction.org"
+    elementFormDefault="qualified">
+
+    <xsd:element name="transactions">
+        <xsd:complexType>
+            <xsd:sequence>
+            <xsd:element name="transaction" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="accountID" type="xsd:string" />
+                        <xsd:element name="companyID" type="xsd:string" />
+                        <xsd:element name="date" type="xsd:string" />
+                        <xsd:element name="type" type="xsd:string" />
+                        <xsd:element name="quantity" type="xsd:decimal" />
+                        <xsd:element name="price" type="xsd:string" />
+                    </xsd:sequence>
+                    <xsd:attribute name="id" type="tra:transactionID" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:simpleType name="transactionID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="3"/>
+            <xsd:pattern value="T[0-9]{2}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

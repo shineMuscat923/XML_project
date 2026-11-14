@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.stock.org"
+    xmlns:stk="http://www.stock.org"
+    xmlns:frm="http://www.form.org"
+    elementFormDefault="qualified">
+
+<xsd:import namespace="http://www.form.org" schemaLocation="form.xsd" />
+
+    <xsd:element name="markets">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name ="market" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="frm:name"/>
+                        <xsd:element name="description" type="xsd:string"/>
+                    </xsd:sequence>
+                    <xsd:attribute name="id" type="stk:marketID" use="required"/>
+                </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:simpleType name="marketID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="3"/>
+            <xsd:pattern value="M[0-9]+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

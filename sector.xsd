@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.stock.org"
+    xmlns:stk="http://www.stock.org"
+    xmlns:frm="http://www.form.org"
+    elementFormDefault="qualified">
+
+
+    <xsd:import namespace ="http://www.form.org" schemaLocation="form.xsd" />
+
+
+    <xsd:element name="sectors">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="sector" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element ref="frm:name"/>
+                            <xsd:element name="stocks" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="stock" minOccurs="0" maxOccurs="unbounded">
+                                        <xsd:complexType>
+                                            <xsd:attribute name="id" type="stk:stockType" use="required"/>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+
+                        <xsd:attribute name="id" type="stk:sectorID" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:simpleType name="stockType">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="3"/>
+            <xsd:pattern value="C[0-9]{2}"/>
+
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="sectorID">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="3"/>
+            <xsd:pattern value="S[0-9]{2}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

@@ -4,53 +4,64 @@
 <!ENTITY nyse "미국 뉴욕증권거래소">
 <!ENTITY % ID " id CDATA #REQUIRED">
 
-<!ELEMENT stockManagement (companies, markets, sectors, transactions, accounts)>
-<!ELEMENT companies (company*)>
-<!ELEMENT company (name, ticker, financialReports)>
-<!ATTLIST company %ID;
+<!ELEMENT stockManagement (co:companies, markets, sectors, tra:transactions, acc:accounts)>
+
+<!ATTLIST stockManagement
+    xmlns CDATA #IMPLIED
+    xmlns:co CDATA #IMPLIED
+    xmlns:tra CDATA #IMPLIED
+    xmlns:acc CDATA #IMPLIED
+    xmlns:frm CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED
+    xsi:schemaLocation CDATA #IMPLIED
+>
+<!ELEMENT co:companies (co:company*)>
+<!ELEMENT co:company (frm:name, co:ticker, co:financialReports)>
+<!ATTLIST co:company %ID;
                     market (KOSPI | KOSDAQ | NASDAQ | NYSE) #REQUIRED
                     sector CDATA #REQUIRED>
-<!ELEMENT financialReports (financialReport*)>
-<!ATTLIST financialReports currency (USD | KRW) #REQUIRED
+<!ELEMENT co:financialReports (co:financialReport*)>
+<!ATTLIST co:financialReports currency (USD | KRW) #REQUIRED
                             unit (trillion | billion) #IMPLIED>
-<!ELEMENT financialReport (revenue, operatingIncome, netIncome)>
-<!ATTLIST financialReport year CDATA #REQUIRED>
-<!ATTLIST financialReport quarter (Q1 | Q2 | Q3 | Q4) #REQUIRED>
-<!ATTLIST financialReport status (released | unreleased) "released">
+<!ELEMENT co:financialReport (co:revenue, co:operatingIncome, co:netIncome)>
+<!ATTLIST co:financialReport year CDATA #REQUIRED>
+<!ATTLIST co:financialReport quarter (Q1 | Q2 | Q3 | Q4) #REQUIRED>
+<!ATTLIST co:financialReport status (released | unreleased) "released">
 
 <!ELEMENT markets (market*)>
-<!ELEMENT market (name, description)>
+<!ELEMENT market (frm:name, description)>
 <!ATTLIST market %ID;>
 
 <!ELEMENT sectors (sector*)>
-<!ELEMENT sector (name, stocks)>
+<!ELEMENT sector (frm:name, stocks)>
 <!ATTLIST sector %ID;>
 <!ATTLIST stock %ID;>
 <!ELEMENT stocks (stock*)>
 <!ELEMENT stock EMPTY>
 
-<!ELEMENT transactions (transaction*)>
-<!ELEMENT transaction (accountID+, companyID+, date+, type+, quantity+, price+)>
-<!ATTLIST transaction %ID;>
+<!ELEMENT tra:transactions (tra:transaction*)>
+<!ELEMENT tra:transaction (tra:accountID+, tra:companyID+, tra:date+, tra:type+, tra:quantity+, tra:price+)>
+<!ATTLIST tra:transaction %ID;>
 
-<!ELEMENT accounts (account*)>
-<!ATTLIST account %ID;>
-<!ELEMENT account (userID, balance+, transactionHistory*)>
-<!ATTLIST balance currency  (USD | KRW) #REQUIRED>
-<!ELEMENT transactionHistory (transactionID*)>
+<!ELEMENT acc:accounts (acc:account*)>
+<!ATTLIST acc:account %ID;>
+<!ELEMENT acc:account (acc:userID, acc:balance+, acc:transactionHistory*)>
+<!ATTLIST acc:balance currency  (USD | KRW) #REQUIRED>
+<!ELEMENT acc:transactionHistory (acc:transactionID*)>
 
-<!ELEMENT revenue (#PCDATA)>
-<!ELEMENT operatingIncome (#PCDATA)>
-<!ELEMENT netIncome (#PCDATA)>
-<!ELEMENT ticker (#PCDATA)>
+<!ELEMENT co:revenue (#PCDATA)>
+<!ELEMENT co:operatingIncome (#PCDATA)>
+<!ELEMENT co:netIncome (#PCDATA)>
+<!ELEMENT co:ticker (#PCDATA)>
+
 <!ELEMENT description (#PCDATA) >
-<!ELEMENT companyID (#PCDATA)>
-<!ELEMENT date (#PCDATA)>
-<!ELEMENT type (#PCDATA)>
-<!ELEMENT quantity (#PCDATA)>
-<!ELEMENT price (#PCDATA)>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT accountID (#PCDATA)>
-<!ELEMENT balance (#PCDATA)>
-<!ELEMENT transactionID (#PCDATA)>
-<!ELEMENT userID (#PCDATA)>
+<!ELEMENT tra:companyID (#PCDATA)>
+<!ELEMENT tra:date (#PCDATA)>
+<!ELEMENT tra:type (#PCDATA)>
+<!ELEMENT tra:quantity (#PCDATA)>
+<!ELEMENT tra:price (#PCDATA)>
+<!ELEMENT frm:name (#PCDATA)>
+<!ELEMENT tra:accountID (#PCDATA)>
+<!ELEMENT acc:balance (#PCDATA)>
+<!ELEMENT acc:transactionID (#PCDATA)>
+<!ELEMENT acc:userID (#PCDATA)>

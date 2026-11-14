@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.company.org"
+    xmlns:co="http://www.company.org"
+    xmlns:frm="http://www.form.org"
+    elementFormDefault="qualified">
+
+    <xsd:import namespace="http://www.form.org" schemaLocation="form.xsd" />
+
+    <xsd:element name="companies">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="co:company" maxOccurs="unbounded" />
+
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="company">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="frm:name" />
+                <xsd:element name="ticker" type="xsd:string" />
+                <xsd:element name="financialReports" minOccurs="1" maxOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element ref="co:financialReport" minOccurs="0"
+                                maxOccurs="unbounded" />
+                        </xsd:sequence>
+
+                        <xsd:attribute name="currency" type="xsd:string" use="required" />
+                        <xsd:attribute name="unit" type="xsd:string" use="required" />
+                    </xsd:complexType>
+
+                </xsd:element>
+            </xsd:sequence>
+
+            <xsd:attribute name="id" type="xsd:string" use="required" />
+            <xsd:attribute name="market" type="co:market" use="required" />
+            <xsd:attribute name="sector" type="co:sector" use="required" />
+
+        </xsd:complexType>
+    </xsd:element>
+
+
+    <xsd:element name="financialReport">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="revenue" type="xsd:string" />
+                <xsd:element name="operatingIncome" type="xsd:string" />
+                <xsd:element name="netIncome" type="xsd:string" />
+            </xsd:sequence>
+            <xsd:attribute name="year" type="xsd:integer" use="required" />
+            <xsd:attribute name="quarter" type="co:quarter" use="required" />
+            <xsd:attribute name="status" type="co:status" use="optional" default="released" />
+        </xsd:complexType>
+
+    </xsd:element>
+
+    <xsd:simpleType name="quarter">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Q1"></xsd:enumeration>
+            <xsd:enumeration value="Q2"></xsd:enumeration>
+            <xsd:enumeration value="Q3"></xsd:enumeration>
+            <xsd:enumeration value="Q4"></xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="market">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="KOSPI"></xsd:enumeration>
+            <xsd:enumeration value="KOSDAQ"></xsd:enumeration>
+            <xsd:enumeration value="NYSE"></xsd:enumeration>
+            <xsd:enumeration value="NASDAQ"></xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="sector">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="반도체"></xsd:enumeration>
+            <xsd:enumeration value="IT"></xsd:enumeration>
+            <xsd:enumeration value="금융"></xsd:enumeration>
+            <xsd:enumeration value="에너지"></xsd:enumeration>
+            <xsd:enumeration value="필수소비재"></xsd:enumeration>
+            <xsd:enumeration value="경기소비재"></xsd:enumeration>
+            <xsd:enumeration value="헬스케어"></xsd:enumeration>
+            <xsd:enumeration value="커뮤니케이션서비스"></xsd:enumeration>
+            <xsd:enumeration value="정보기술"></xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="status">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="released"></xsd:enumeration>
+            <xsd:enumeration value="unreleased"></xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>
