@@ -1,455 +1,466 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE stockManagement SYSTEM "test.dtd">
 
-<stockManagement>
-    <companies>
-        <company id="C01" market ="KOSPI" sector="반도체">
-            <name>삼성전자</name>
-            <ticker>005930</ticker>
-            <financialReports currency="KRW" unit="trillion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>133.873444</revenue>
-                    <operatingIncome>57.232797</operatingIncome>
-                    <netIncome>41.401515</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>171.49947</revenue>
-                    <operatingIncome>89.492412</operatingIncome>
-                    <netIncome>71.62</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3">
-                    <revenue>195.25</revenue>
-                    <operatingIncome>107.44</operatingIncome>
-                    <netIncome>75.13</netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C02" market ="KOSPI" sector="반도체">
-            <name>SK하이닉스</name>
-            <ticker>000660</ticker>
-            <financialReports currency="KRW" unit="trillion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>52.5763</revenue>
-                    <operatingIncome>37.6103</operatingIncome>
-                    <netIncome>40.3459</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>79.3187</revenue>
-                    <operatingIncome>60.5426</operatingIncome>
-                    <netIncome>93.9226</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
 
-        <company id="C03" market ="NASDAQ" sector="정보기술">
-            <name>Apple</name>
-            <ticker>AAPL</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>111.184</revenue>
-                    <operatingIncome>35.885</operatingIncome>
-                    <netIncome>29.578</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>109.417</revenue>
-                    <operatingIncome>35.695</operatingIncome>
-                    <netIncome>29.789</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
+<stockManagement
+    xmlns="http://www.stock.org"
+    xmlns:co="http://www.company.org"
+    xmlns:tra="http://www.transaction.org"
+    xmlns:acc="http://www.account.org"
+    xmlns:frm="http://www.form.org"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.stock.org stock.xsd">
 
-            </financialReports>
-        </company>
-        <company id="C04" market ="NYSE" sector="필수소비재">
-            <name>Coca-Cola</name>
-            <ticker>KO</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>13.38</revenue>
-                    <operatingIncome>4.672</operatingIncome>
-                    <netIncome>4.425</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C05" market ="NASDAQ" sector="반도체">
-            <name>NVIDIA</name>
-            <ticker>NVDA</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>81.615</revenue>
-                    <operatingIncome>53.536</operatingIncome>
-                    <netIncome>58.321</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>96.221</revenue>
-                    <operatingIncome>63.734</operatingIncome>
-                    <netIncome>59.688</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C06" market ="NASDAQ" sector="경기소비재">
-            <name>Amazon</name>
-            <ticker>AMZN</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>181.519</revenue>
-                    <operatingIncome>23.852</operatingIncome>
-                    <netIncome>30.255</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>200.606</revenue>
-                    <operatingIncome>27.461</operatingIncome>
-                    <netIncome>62.647</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C07" market ="NASDAQ" sector="커뮤니케이션서비스">
-            <name>Alphabet Class C</name>
-            <ticker>GOOG</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>109.896</revenue>
-                    <operatingIncome>39.696</operatingIncome>
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>119.796</revenue>
-                    <operatingIncome>40.77</operatingIncome>
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C08" market ="NYSE" sector="금융">
-            <name>JPMorgan Chase</name>
-            <ticker>JPM</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>49.836</revenue>
-                    <operatingIncome>20.479</operatingIncome>
-                    <netIncome>16.494</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>57.347</revenue>
-                    <operatingIncome>27.516</operatingIncome>
-                    <netIncome>21.155</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C09" market ="NASDAQ" sector="IT">
-            <name>Microsoft</name>
-            <ticker>MSFT</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q2" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C10" market ="NASDAQ" sector="헬스케어">
-            <name>Moderna</name>
-            <ticker>MRNA</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q2" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q3">
-                    <revenue>195.25</revenue>
-                    <operatingIncome>107.44</operatingIncome>
-                    <netIncome>75.13</netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C11" market ="NASDAQ" sector="경기소비재">
-            <name>Tesla</name>
-            <ticker>TSLA</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>22.384</revenue>
-                    <operatingIncome>0.941</operatingIncome>
-                    <netIncome>0.477</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>28.236</revenue>
-                    <operatingIncome>0.398</operatingIncome>
-                    <netIncome>1.114</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C12" market ="NASDAQ" sector="IT">
-            <name>Meta Platforms</name>
-            <ticker>META</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>56.31</revenue>
-                    <operatingIncome>22.872</operatingIncome>
-                    <netIncome>26.773</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>60.801</revenue>
-                    <operatingIncome>18.775</operatingIncome>
-                    <netIncome>15.848</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C13" market ="NASDAQ" sector="반도체">
-            <name>Advanced Micro Devices</name>
-            <ticker>AMD</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>10.253</revenue>
-                    <operatingIncome>1.476</operatingIncome>
-                    <netIncome>1.383</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>11.536</revenue>
-                    <operatingIncome>1.99</operatingIncome>
-                    <netIncome>2.297</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue></revenue>
-                    <operatingIncome></operatingIncome>
-                    <netIncome></netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C14" market ="NASDAQ" sector="반도체">
-            <name>Broadcom</name>
-            <ticker>AVGO</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q2" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q3" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C15" market ="NASDAQ" sector="IT">
-            <name>Netflix</name>
-            <ticker>NFLX</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q2" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q3">
-                    <revenue>195.25</revenue>
-                    <operatingIncome>107.44</operatingIncome>
-                    <netIncome>75.13</netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C16" market ="NYSE" sector="금융">
-            <name>Visa</name>
-            <ticker>V</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q2" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q3">
-                    <revenue>195.25</revenue>
-                    <operatingIncome>107.44</operatingIncome>
-                    <netIncome>75.13</netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C17" market ="NASDAQ" sector="필수소비재">
-            <name>Walmart</name>
-            <ticker>WMT</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q2" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q3">
-                    <revenue>195.25</revenue>
-                    <operatingIncome>107.44</operatingIncome>
-                    <netIncome>75.13</netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C18" market ="NYSE" sector="헬스케어">
-            <name>Eli Lilly</name>
-            <ticker>LLY</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue>19.799</revenue>
-                    <operatingIncome />
-                    <netIncome>7.396</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>22.974</revenue>
-                    <operatingIncome />
-                    <netIncome>7.095</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3">
-                    <revenue>195.25</revenue>
-                    <operatingIncome>107.44</operatingIncome>
-                    <netIncome>75.13</netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C19" market ="NYSE" sector="금융">
-            <name>Berkshire Hathaway</name>
-            <ticker>BRK.B</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1" status="unreleased">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue>101.81</revenue>
-                    <operatingIncome />
-                    <netIncome />
-                </financialReport>
-                <financialReport year="2026" quarter="Q3">
-                    <revenue>195.25</revenue>
-                    <operatingIncome>107.44</operatingIncome>
-                    <netIncome>75.13</netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-        <company id="C20" market ="NYSE" sector="에너지">
-            <name>Exxon Mobil</name>
-            <ticker>XOM</ticker>
-            <financialReports currency="USD" unit="billion">
-                <financialReport year="2026" quarter="Q1">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome>4.183</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q2">
-                    <revenue />
-                    <operatingIncome />
-                    <netIncome>14.525</netIncome>
-                </financialReport>
-                <financialReport year="2026" quarter="Q3">
-                    <revenue>195.25</revenue>
-                    <operatingIncome>107.44</operatingIncome>
-                    <netIncome>75.13</netIncome>
-                </financialReport>
-            </financialReports>
-        </company>
-    </companies>
+    <co:companies>
+        <co:company id="C01" market ="KOSPI" sector="반도체">
+            <frm:name>삼성전자</frm:name>
+            <co:ticker>005930</co:ticker>
+            <co:financialReports currency="KRW" unit="trillion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>133.873444</co:revenue>
+                    <co:operatingIncome>57.232797</co:operatingIncome>
+                    <co:netIncome>41.401515</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2" >
+                    <co:revenue>171.49947</co:revenue>
+                    <co:operatingIncome>89.492412</co:operatingIncome>
+                    <co:netIncome>71.62</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3">
+                    <co:revenue>195.25</co:revenue>
+                    <co:operatingIncome>107.44</co:operatingIncome>
+                    <co:netIncome>75.13</co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+
+        <co:company id="C02" market ="KOSPI" sector="반도체">
+            <frm:name>SK하이닉스</frm:name>
+            <co:ticker>000660</co:ticker>
+            <co:financialReports currency="KRW" unit="trillion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>52.5763</co:revenue>
+                    <co:operatingIncome>37.6103</co:operatingIncome>
+                    <co:netIncome>40.3459</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>79.3187</co:revenue>
+                    <co:operatingIncome>60.5426</co:operatingIncome>
+                    <co:netIncome>93.9226</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+
+        <co:company id="C03" market ="NASDAQ" sector="정보기술">
+            <frm:name>Apple</frm:name>
+            <co:ticker>AAPL</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>111.184</co:revenue>
+                    <co:operatingIncome>35.885</co:operatingIncome>
+                    <co:netIncome>29.578</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>109.417</co:revenue>
+                    <co:operatingIncome>35.695</co:operatingIncome>
+                    <co:netIncome>29.789</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                </co:financialReport>
+
+            </co:financialReports>
+        </co:company>
+        <co:company id="C04" market ="NYSE" sector="필수소비재">
+            <frm:name>Coca-Cola</frm:name>
+            <co:ticker>KO</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>13.38</co:revenue>
+                    <co:operatingIncome>4.672</co:operatingIncome>
+                    <co:netIncome>4.425</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C05" market ="NASDAQ" sector="반도체">
+            <frm:name>NVIDIA</frm:name>
+            <co:ticker>NVDA</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>81.615</co:revenue>
+                    <co:operatingIncome>53.536</co:operatingIncome>
+                    <co:netIncome>58.321</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>96.221</co:revenue>
+                    <co:operatingIncome>63.734</co:operatingIncome>
+                    <co:netIncome>59.688</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C06" market ="NASDAQ" sector="경기소비재">
+            <frm:name>Amazon</frm:name>
+            <co:ticker>AMZN</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>181.519</co:revenue>
+                    <co:operatingIncome>23.852</co:operatingIncome>
+                    <co:netIncome>30.255</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>200.606</co:revenue>
+                    <co:operatingIncome>27.461</co:operatingIncome>
+                    <co:netIncome>62.647</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C07" market ="NASDAQ" sector="커뮤니케이션서비스">
+            <frm:name>Alphabet Class C</frm:name>
+            <co:ticker>GOOG</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>109.896</co:revenue>
+                    <co:operatingIncome>39.696</co:operatingIncome>
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>119.796</co:revenue>
+                    <co:operatingIncome>40.77</co:operatingIncome>
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C08" market ="NYSE" sector="금융">
+            <frm:name>JPMorgan Chase</frm:name>
+            <co:ticker>JPM</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>49.836</co:revenue>
+                    <co:operatingIncome>20.479</co:operatingIncome>
+                    <co:netIncome>16.494</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>57.347</co:revenue>
+                    <co:operatingIncome>27.516</co:operatingIncome>
+                    <co:netIncome>21.155</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C09" market ="NASDAQ" sector="IT">
+            <frm:name>Microsoft</frm:name>
+            <co:ticker>MSFT</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C10" market ="NASDAQ" sector="헬스케어">
+            <frm:name>Moderna</frm:name>
+            <co:ticker>MRNA</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3">
+                    <co:revenue>195.25</co:revenue>
+                    <co:operatingIncome>107.44</co:operatingIncome>
+                    <co:netIncome>75.13</co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C11" market ="NASDAQ" sector="경기소비재">
+            <frm:name>Tesla</frm:name>
+            <co:ticker>TSLA</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>22.384</co:revenue>
+                    <co:operatingIncome>0.941</co:operatingIncome>
+                    <co:netIncome>0.477</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>28.236</co:revenue>
+                    <co:operatingIncome>0.398</co:operatingIncome>
+                    <co:netIncome>1.114</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                        </co:financialReport>
+                    </co:financialReports>
+        </co:company>
+        <co:company id="C12" market ="NASDAQ" sector="IT">
+            <frm:name>Meta Platforms</frm:name>
+            <co:ticker>META</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>56.31</co:revenue>
+                    <co:operatingIncome>22.872</co:operatingIncome>
+                    <co:netIncome>26.773</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>60.801</co:revenue>
+                    <co:operatingIncome>18.775</co:operatingIncome>
+                    <co:netIncome>15.848</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C13" market ="NASDAQ" sector="반도체">
+            <frm:name>Advanced Micro Devices</frm:name>
+            <co:ticker>AMD</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>10.253</co:revenue>
+                    <co:operatingIncome>1.476</co:operatingIncome>
+                    <co:netIncome>1.383</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>11.536</co:revenue>
+                    <co:operatingIncome>1.99</co:operatingIncome>
+                    <co:netIncome>2.297</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue></co:revenue>
+                    <co:operatingIncome></co:operatingIncome>
+                    <co:netIncome></co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C14" market ="NASDAQ" sector="반도체">
+            <frm:name>Broadcom</frm:name>
+            <co:ticker>AVGO</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+
+       <co:company id="C15" market ="NASDAQ" sector="IT">
+            <frm:name>Netflix</frm:name>
+            <co:ticker>NFLX</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3">
+                    <co:revenue>195.25</co:revenue>
+                    <co:operatingIncome>107.44</co:operatingIncome>
+                    <co:netIncome>75.13</co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C16" market ="NYSE" sector="금융">
+            <frm:name>Visa</frm:name>
+            <co:ticker>V</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3">
+                    <co:revenue>195.25</co:revenue>
+                    <co:operatingIncome>107.44</co:operatingIncome>
+                    <co:netIncome>75.13</co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C17" market ="NASDAQ" sector="필수소비재">
+            <frm:name>Walmart</frm:name>
+            <co:ticker>WMT</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3">
+                    <co:revenue>195.25</co:revenue>
+                    <co:operatingIncome>107.44</co:operatingIncome>
+                    <co:netIncome>75.13</co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C18" market ="NYSE" sector="헬스케어">
+            <frm:name>Eli Lilly</frm:name>
+            <co:ticker>LLY</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue>19.799</co:revenue>
+                    <co:operatingIncome />
+                    <co:netIncome>7.396</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>22.974</co:revenue>
+                    <co:operatingIncome />
+                    <co:netIncome>7.095</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3">
+                    <co:revenue>195.25</co:revenue>
+                    <co:operatingIncome>107.44</co:operatingIncome>
+                    <co:netIncome>75.13</co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C19" market ="NYSE" sector="금융">
+            <frm:name>Berkshire Hathaway</frm:name>
+            <co:ticker>BRK.B</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1" status="unreleased">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue>101.81</co:revenue>
+                    <co:operatingIncome />
+                    <co:netIncome />
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3">
+                    <co:revenue>195.25</co:revenue>
+                    <co:operatingIncome>107.44</co:operatingIncome>
+                    <co:netIncome>75.13</co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+        <co:company id="C20" market ="NYSE" sector="에너지">
+            <frm:name>Exxon Mobil</frm:name>
+            <co:ticker>XOM</co:ticker>
+            <co:financialReports currency="USD" unit="billion">
+                <co:financialReport year="2026" quarter="Q1">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome>4.183</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q2">
+                    <co:revenue />
+                    <co:operatingIncome />
+                    <co:netIncome>14.525</co:netIncome>
+                </co:financialReport>
+                <co:financialReport year="2026" quarter="Q3">
+                    <co:revenue>195.25</co:revenue>
+                    <co:operatingIncome>107.44</co:operatingIncome>
+                    <co:netIncome>75.13</co:netIncome>
+                </co:financialReport>
+            </co:financialReports>
+        </co:company>
+    </co:companies>
 
 
     <markets>
         <market id="M01">
-            <name>KOSPI</name>
+            <frm:name>KOSPI</frm:name>
             <description>&kospi;</description>
         </market>
         <market id="M02">
-            <name>KOSDAQ</name>
+            <frm:name>KOSDAQ</frm:name>
             <description>&kosdaq;</description>
         </market>
         <market id="M03">
-            <name>NASDAQ</name>
+            <frm:name>NASDAQ</frm:name>
             <description>&nasdaq;</description>
         </market>
         <market id="M04">
-            <name>NYSE</name>
+            <frm:name>NYSE</frm:name>
             <description>&nyse;</description>
         </market>
     </markets>
 
     <sectors>
         <sector id="S01">
-            <name>반도체</name>
+            <frm:name>반도체</frm:name>
             <stocks>
                 <stock id="C01" />
                 <stock id="C02" />
@@ -459,7 +470,7 @@
             </stocks>
         </sector>
         <sector id="S02">
-            <name>IT</name>
+            <frm:name>IT</frm:name>
             <stocks>
                 <stock id="C09" />
                 <stock id="C12" />
@@ -467,7 +478,7 @@
             </stocks>
         </sector>
         <sector id="S03">
-            <name>금융</name>
+            <frm:name>금융</frm:name>
             <stocks>
                 <stock id="C08" />
                 <stock id="C16" />
@@ -475,101 +486,101 @@
             </stocks>
         </sector>
         <sector id="S04">
-            <name>에너지</name>
+            <frm:name>에너지</frm:name>
             <stocks>
                 <stock id="C20" />
             </stocks>
         </sector>
         <sector id="S05">
-            <name>필수소비재</name>
+            <frm:name>필수소비재</frm:name>
             <stocks>
                 <stock id="C04" />
                 <stock id="C17" />
             </stocks>
         </sector>
         <sector id="S06">
-            <name>경기소비재</name>
+            <frm:name>경기소비재</frm:name>
             <stocks>
                 <stock id="C06" />
                 <stock id="C11" />
             </stocks>
         </sector>
         <sector id="S07">
-            <name>헬스케어</name>
+            <frm:name>헬스케어</frm:name>
             <stocks>
                 <stock id="C10" />
                 <stock id="C18" />
             </stocks>
         </sector>
         <sector id="S08">
-            <name>커뮤니케이션서비스</name>
+            <frm:name>커뮤니케이션서비스</frm:name>
             <stocks>
                 <stock id="C07" />
             </stocks>
         </sector>
         <sector id="S09">
-            <name>정보기술</name>
+            <frm:name>정보기술</frm:name>
             <stocks>
                 <stock id="C03" />
             </stocks>
         </sector>
     </sectors>
 
-    <transactions>
-        <transaction id="T01">
-            <accountID>A01</accountID>
-            <companyID>C01</companyID>
-            <date>2025-01-15</date>
-            <type>buy</type>
-            <quantity>100</quantity>
-            <price>70000</price>
-        </transaction>
-        <transaction id="T02">
-            <accountID>A01</accountID>
-            <companyID >C02</companyID>
-            <date>2025-01-20</date>
-            <type>sell</type>
-            <quantity>50</quantity>
-            <price>120000</price>
-        </transaction>
-        <transaction id="T03">
-            <accountID>A01</accountID>
-            <companyID>C03</companyID>
-            <date>2025-02-05</date>
-            <type>buy</type>
-            <quantity>200</quantity>
-            <price>150000</price>
-        </transaction>
-        <transaction id="T04">
-            <accountID>A01</accountID>
-            <companyID>C04</companyID>
-            <date>2025-02-10</date>
-            <type>sell</type>
-            <quantity>80</quantity>
-            <price>60000</price>
-        </transaction>
-    </transactions>
+    <tra:transactions>
+        <tra:transaction id="T01">
+            <tra:accountID>A01</tra:accountID>
+            <tra:companyID>C01</tra:companyID>
+            <tra:date>2025-01-15</tra:date>
+            <tra:type>buy</tra:type>
+            <tra:quantity>100</tra:quantity>
+            <tra:price>70000</tra:price>
+        </tra:transaction>
+        <tra:transaction id="T02">
+            <tra:accountID>A01</tra:accountID>
+            <tra:companyID>C02</tra:companyID>
+            <tra:date>2025-01-20</tra:date>
+            <tra:type>sell</tra:type>
+            <tra:quantity>50</tra:quantity>
+            <tra:price>120000</tra:price>
+        </tra:transaction>
+        <tra:transaction id="T03">
+            <tra:accountID>A01</tra:accountID>
+            <tra:companyID>C03</tra:companyID>
+            <tra:date>2025-02-05</tra:date>
+            <tra:type>buy</tra:type>
+            <tra:quantity>200</tra:quantity>
+            <tra:price>150000</tra:price>
+        </tra:transaction>
+        <tra:transaction id="T04">
+            <tra:accountID>A01</tra:accountID>
+            <tra:companyID>C04</tra:companyID>
+            <tra:date>2025-02-10</tra:date>
+            <tra:type>sell</tra:type>
+            <tra:quantity>80</tra:quantity>
+            <tra:price>60000</tra:price>
+        </tra:transaction>
+    </tra:transactions>
 
-    <accounts> 
-        <account id ="A01">
-            <userID>user1</userID>
-            <balance currency ="KRW">10000000</balance>
-            <balance currency ="USD">1000000</balance>
+    <acc:accounts> 
+        <acc:account id ="A01">
+            <acc:userID>user1</acc:userID>
+            <acc:balance currency ="KRW">10000000</acc:balance>
+            <acc:balance currency ="USD">1000000</acc:balance>
 
-            <transactionHistory>
-                <transactionID>T01</transactionID>
-                <transactionID>T02</transactionID>
-            </transactionHistory>
-        </account>
-         <account id ="A02">
-            <userID>user2</userID>
-            <balance currency ="KRW">20000000</balance>
-            <balance currency ="USD">2000000</balance>
-            <transactionHistory>
-                <transactionID>T03</transactionID>
-                <transactionID>T04</transactionID>
-            </transactionHistory>
-        </account>
-    </accounts>
+            <acc:transactionHistory>
+                <acc:transactionID>T01</acc:transactionID>
+                <acc:transactionID>T02</acc:transactionID>
+            </acc:transactionHistory>
+        </acc:account>
+         <acc:account id ="A02">
+            <acc:userID>user2</acc:userID>
+            <acc:balance currency ="KRW">20000000</acc:balance>
+            <acc:balance currency ="USD">2000000</acc:balance>
+            <acc:transactionHistory>
+                <acc:transactionID>T03</acc:transactionID>
+                <acc:transactionID>T04</acc:transactionID>
+            </acc:transactionHistory>
+        </acc:account>
+    </acc:accounts>
 
 </stockManagement>
